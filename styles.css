@@ -34,7 +34,9 @@
     margin: 0; /* Remove default margin from the score */
 }
 
-
+.refresh-button{
+    margin-left: -100px;
+}
 /* Trash bins container */
 .trash-bins-container {
     display: flex; /* Align the bins in a row */

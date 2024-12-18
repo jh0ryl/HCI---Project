@@ -8,7 +8,6 @@ function randomizeImages() {
     unsortedItems.forEach((item) => {
         let randomTrash = getTrash(); // Get a random trash object
         item.src = randomTrash.src;   // Set image source
-        item.dataset.type = randomTrash.type; // Save the type for later use if needed
     });
 }
 

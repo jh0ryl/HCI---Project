@@ -3,6 +3,45 @@ let trashes = loadTrashes()
 let trash = getTrash()
 
 let unsortedItems = document.querySelectorAll(".unsorted-item img");
+unsortedItems.forEach(item => {
+    item.setAttribute("draggable", true);
+    item.addEventListener("dragstart", event => {
+        event.dataTransfer.setData("text/plain", event.target.src);
+        event.dataTransfer.setData("trash-type", event.target.closest(".unsorted-item").getAttribute("data-type"));
+    });
+});
+
+const trashBins = document.querySelectorAll(".trash-bin");
+trashBins.forEach(bin => {
+    bin.addEventListener("dragover", event => {
+        event.preventDefault(); // Necessary to allow dropping
+    });
+
+    bin.addEventListener("drop", event => {
+        event.preventDefault();
+        const droppedItemSrc = event.dataTransfer.getData("text/plain");
+        const binType = event.target.querySelector("h1").textContent.toLowerCase().includes("organic") ? "organic"
+                       : event.target.querySelector("h1").textContent.toLowerCase().includes("recyclable") ? "recyclable"
+                       : event.target.querySelector("h1").textContent.toLowerCase().includes("hazardous") ? "hazardous"
+                       : "residual";
+
+        const draggedItemType = event.dataTransfer.getData("trash-type"); // Optional type check
+        if (draggedItemType === binType) {
+            // dito lalagay score
+            console.log("Correct bin!");
+        } else {
+            console.log("Incorrect bin!");
+        }
+    });
+});
+
+bin.addEventListener("dragenter", event => {
+    event.target.classList.add("dragover");
+});
+bin.addEventListener("dragleave", event => {
+    event.target.classList.remove("dragover");
+});
+
 
 function randomizeImages() {
     unsortedItems.forEach((item) => {

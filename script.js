@@ -22,97 +22,76 @@ function loadTrashes(){
     //hazardous
     trashes.push({
         type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/kerosene.png' })
+        src: 'Updated Picture/NEW_Hazardous/battery.png' })
     trashes.push({
         type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/medicine.png' })
+        src: 'Updated Picture/NEW_Hazardous/kerosene.png' })
     trashes.push({
         type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes//motorOil.png' })
+        src: 'Updated Picture/NEW_Hazardous/medicine.png' })
     trashes.push({
         type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/muriaticAcid.png' })
+        src: 'Updated Picture/NEW_Hazardous/pesticide.png' })
     trashes.push({
         type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/pesticide.png' })
-    trashes.push({
-        type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/solvent.png' })
-    trashes.push({
-        type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/used_battery.png' })
-    trashes.push({
-        type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/used_mask.png' })
-    trashes.push({
-        type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/used_thermometer.png'  })
-    trashes.push({
-        type: 'hazardous',
-        src: 'Pictures/Trash Pictures/Hazardous Wastes/varnish.png' })
+        src: 'Updated Picture/NEW_Hazardous/usedMask.png' })
 
     //organic
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/banana_peel.png' })
+        src: 'Updated Picture/NEW_Organic/appleWaste.png' })
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/crumpled_paper.png' })    
+        src: 'Updated Picture/NEW_Organic/bananaPeel.png' })    
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/food_waste.png' })  
+        src: 'Updated Picture/NEW_Organic/driedLeaves.png' })  
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/leaves.png' }) 
+        src: 'Updated Picture/NEW_Organic/eggShell.png' }) 
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/leftover_food.png' }) 
+        src: 'Updated Picture/NEW_Organic/Services.png' }) 
     trashes.push ({
         type: 'organic',
-        src: 'Pictures/Trash Pictures/Organic Wastes/tissue_paper.png' }) 
+        src: 'Updated Picture/NEW_Organic/tissuePaper.png' }) 
 
     //recyclable
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/glass_bottle.png'})
+        src:'Updated Picture/NEW_Recyclable/bottle.png'})
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/plastic_bag.png'})
+        src:'Updated Picture/NEW_Recyclable/can.png'})
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/plastic_bottle.png'})
+        src:'Updated Picture/NEW_Recyclable/plasticBag.png'})
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/coke.png'})
+        src:'Updated Picture/NEW_Recyclable/plasticBottle.png'})
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/tin_can.png'})
+        src:'Updated Picture/NEW_Recyclable/plasticCup.png'})
     trashes.push({
         type: 'recyclable',
-        src:'Pictures/Trash Pictures/Recyclable Wastes/used_cd.png'})
+        src:'Updated Picture/NEW_Recyclable/straw.png'})
 
     //residual
     trashes.push({
         type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/candy_wrappers.png'})
+        src:'Updated Picture/NEW_Residual/candyWrapper.png'})
     trashes.push({
         type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/rotten_apple.png'})
+        src:'Updated Picture/NEW_Residual/rottenApple.png'})
     trashes.push({
         type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/rotten_food.png'})
+        src:'Updated Picture/NEW_Residual/rottenBread.png'})
     trashes.push({
         type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/styrofoam.png' })
+        src:'Updated Picture/NEW_Residual/styrofoam.png' })
     trashes.push({
         type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/tire.png'})
-    trashes.push({
-        type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/used_diaper.png'})
-    trashes.push({
-        type: 'residual',
-        src:'Pictures/Trash Pictures/Residual Wastes/used_wrapper.png'})
+        src:'Updated Picture/NEW_Residual/tire.png'})
 
     return trashes
 }

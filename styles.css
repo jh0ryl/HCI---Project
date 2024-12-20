@@ -10,13 +10,11 @@ body{
 }
 
 .main-container {
-    width: 80%; /* Set the width to 80% of the parent container */
+    width: 100%; /* Set the width to 80% of the parent container */
     margin: 0 auto; /* Center the container horizontally */
     max-width: 1200px; /* Optional: Set a maximum width for larger screens */
     padding: 20px; /* Optional: Add padding for inner spacing */
-    box-sizing: border-box; /* Ensure padding is included in the total width */
-    border: 1px solid gray; /* Add a thin gray border */
-    border-radius: 5px; /* Optional: Add rounded corners for a softer look */
+    
     text-align: center; /* Center-align text content */
 }
 
@@ -55,16 +53,13 @@ body{
     margin-bottom: 20px; /* Add space below the bins */
     padding: 10px; /* Optional: Add padding for aesthetics */
     background: rgba(0,0,0,0); /*background*/
-    border-radius: 5px; /* Rounded corners for the container */
-    border: 1px dashed gray; /* Optional: Add a dashed border for distinction */
     object-fit: contain;
 }
 
 /* Base styles for all trash bins */
 .trash-bin {
-    width: 20%; /* Set width to 30% of the container */
+    width: 30%; /* Set width to 30% of the container */
     height: 60vh; /* Set a fixed height for the bins */
-    border-radius: 5px; /* Add rounded corners */
     display: flex; /* For centering content inside */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -73,25 +68,25 @@ body{
 /* Individual colors */
 .trash-bin-1 img {
     object-fit: contain;
-    width: 95%;
+    width: 100%;
     height: auto;
 }
 
 .trash-bin-2 img {
     object-fit: contain;
-    width: 95%;
+    width: 100%;
     height: auto;
 }
 
 .trash-bin-3 img {
     object-fit: contain;
-    width: 95%;
+    width: 100%;
     height: auto;
 }
 
 .trash-bin-4 img {
     object-fit: contain;
-    width: 95%;
+    width: 100%;
     height: auto;
 }
 
@@ -103,13 +98,14 @@ body{
     gap: 10px; /* Adjust spacing between items */
     justify-items: center;
     align-items: center;
+    border: 3px solid #ccc;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
 }
 
 .unsorted-item img {
-    width: 150px; /* Set the width of each image */
-    height: 150px; /* Set the height of each image */
+    width: 100%; /* Set the width of each image */
+    height: auto; /* Set the height of each image */
     object-fit: contain; /* Ensure images maintain their aspect ratio */
-    border: 1px solid #ccc; /* Optional: border for the images */
-    border-radius: 5px; /* Optional: rounded corners */
-    background: rgba(0,0,0,0.3);
+    filter: drop-shadow(8px 8px black);
 }

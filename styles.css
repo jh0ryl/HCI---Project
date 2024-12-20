@@ -1,4 +1,14 @@
 /* General styles for the main container */
+body{
+    box-sizing: border-box;
+    background-image: url("Updated\ Picture/Assets/Background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
 .main-container {
     width: 80%; /* Set the width to 80% of the parent container */
     margin: 0 auto; /* Center the container horizontally */
@@ -80,16 +90,17 @@
 }
 .unsorted-items-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-template-columns: repeat(6, 1fr); /* 5 columns */
+    /* grid-template-rows: repeat(2, 1fr); */
+     /* 2 rows */
     gap: 10px; /* Adjust spacing between items */
     justify-items: center;
     align-items: center;
 }
 
 .unsorted-item img {
-    width: 120px; /* Set the width of each image */
-    height: 120px; /* Set the height of each image */
+    width: 150px; /* Set the width of each image */
+    height: 150px; /* Set the height of each image */
     object-fit: cover; /* Ensure images maintain their aspect ratio */
     border: 1px solid #ccc; /* Optional: border for the images */
     border-radius: 5px; /* Optional: rounded corners */

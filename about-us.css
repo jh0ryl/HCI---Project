@@ -100,11 +100,12 @@ body, h1, h3, p {
 }
   
   .member img {
-    width: 100px;         
-    height: 100px;        
-    object-fit: contain;  
-    margin-bottom: 10px;  
-    border-radius: 10px;
+    width: 160px;      
+    height: 200px;       
+    object-fit: cover;
+    margin-bottom: 10px; 
+    margin: 0 auto;      
+    display: block;   
   }
   
   .member h3 {
@@ -120,6 +121,7 @@ body, h1, h3, p {
 
 .icon-text {
     align-items: center;
+    text-align: left;
     word-wrap: break-word;
     margin: 15px auto; 
     color: #333; 
@@ -138,6 +140,7 @@ body, h1, h3, p {
     overflow-wrap: break-word; 
     word-break: break-word; 
     display: inline-block;
+    text-align: left;
   }
 
   .icon-text a {
@@ -162,6 +165,8 @@ body, h1, h3, p {
   .icon-text:hover i {
     color: #0056b3; 
   }
+  
+  
   
   
   

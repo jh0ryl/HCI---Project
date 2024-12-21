@@ -35,23 +35,20 @@ body, h1, h3, p {
     text-align: center;
   }
   
-  .back-button img {
-    width: 100px;
-    height: 50px;
-    cursor: pointer; 
+  .back-button i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fd6900; 
+    position: relative; 
+    border: 2px solid black; 
+    padding: 3px;
+    border-radius: 50%; 
     transition: 0.3s; 
   }
   
-  .back-button .hover {
-    opacity: 0; 
-  }
-  
-  .back-button:hover .default {
-    opacity: 0; 
-  }
-  
-  .back-button:hover .hover {
-    opacity: 1; 
+  .back-button:hover i {
+    color: #23e311; 
+    cursor: pointer;  
   }
 
   .description {
@@ -149,5 +146,6 @@ body, h1, h3, p {
   .icon-text:hover i {
     color: #0056b3; 
   }
+  
   
   

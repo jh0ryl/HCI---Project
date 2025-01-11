@@ -64,11 +64,6 @@ body, h1, h3, p {
     margin: 20px auto;
     transition: 0.3s; 
   }
-
-  .description:hover {
-    transform: scale(1.1);
-    background-color: #5fe153;
-}
   
   .description p {
     font-size: 1.2rem;

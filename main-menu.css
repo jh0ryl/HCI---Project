@@ -108,6 +108,8 @@ a{
     right: 100px;
     top: 20px;
     /* border: 1px solid black; */
+    max-width: 1200px; 
+    min-width: 768px;
 }
 
 .trash-container{
@@ -119,6 +121,8 @@ a{
     justify-content: flex-end;
     /* border: 1px solid black; */
     margin-top: 20px;
+    max-width: 1200px; 
+    min-width: 768px;
 }
 
 .trash-bin{

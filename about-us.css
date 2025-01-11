@@ -147,6 +147,7 @@ body, h1, h3, p {
     display: inline-block;
   }
   
+  /*hovers*/
   .icon-text:hover p {
     color: #0056b3; 
     cursor: pointer; 

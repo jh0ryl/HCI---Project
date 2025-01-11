@@ -109,3 +109,8 @@ body{
     object-fit: contain; /* Ensure images maintain their aspect ratio */
     filter: drop-shadow(8px 8px black);
 }
+
+.hearts img {
+    width: 5%;
+    height: auto;
+}

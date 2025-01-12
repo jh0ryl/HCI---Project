@@ -47,6 +47,7 @@ function drop(event) {
       console.log('Correct match!');
       score = score + 50;
         updateScore();
+        showModal(correctModal); 
     
       if (draggedObject) {
         draggedObject.style.display = 'none'; //makes the item disappear when put to correct bin
@@ -63,6 +64,7 @@ function drop(event) {
             heartIcons[heart].style.filter = "grayscale(100%)"; //set the heart to grey when an item is put to wrong bin
         }
         console.log('Wrong bin!');
+        showModal(wrongModal); 
 
         if(heart === 0){
             console.log("Game Over");
@@ -190,6 +192,9 @@ const pause = document.getElementById('pause-pop-container');
 const pauseBtn = document.getElementById('openPauseButton'); 
 const closeBtn = document.getElementById('close-pause-modal');  
 
+const correctModal = document.getElementById('correct-pop-up');
+const wrongModal = document.getElementById('wrong-pop-up');
+
 pauseBtn.addEventListener('click', () => {
     pause.style.display = 'flex';
   });
@@ -202,5 +207,30 @@ window.addEventListener('click', (e) => {
     if (e.target === pause) {
       pause.style.display = 'none';
     }
-  });
+  }); 
+
+function showModal(modal) {
+    modal.classList.add('show');
+    setTimeout(() => {
+      fadeOutModal(modal);
+    }, 1000); 
+  } 
+
+function fadeOutModal(modal) {
+    modal.style.transition = "opacity 1s ease";
+    modal.style.opacity = 0;  
+
+
+    setTimeout(() => {
+        modal.classList.remove('show');  
+        modal.style.opacity = 1;  
+    }, 1000);  
+  }
+
+  window.addEventListener('click', (e) => {
+    if (e.target === correctModal || e.target === wrongModal) {
+        fadeOutModal(e.target);  
+    }
+});
+
 randomizeImages();

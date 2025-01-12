@@ -1,7 +1,7 @@
 let score = 0;
 let trashes = loadTrashes()
 let trash = getTrash()
-let count = 6;
+let count = 12;
 let heart = 3;
 
 let scoreElement = document.querySelector(".score-container h3");
@@ -98,7 +98,7 @@ function randomizeImages() {
         item.src = randomTrash.src;   // Set image source
         item.style.display = 'block';
     });
-    count = 6;
+    count = 12;
 }
 
 //randomizing function

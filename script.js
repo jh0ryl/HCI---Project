@@ -184,6 +184,23 @@ function loadTrashes(){
         src:'Updated Picture/NEW_Residual/tire.png'})
 
     return trashes
-}
+} 
 
+const pause = document.getElementById('pause-pop-container'); 
+const pauseBtn = document.getElementById('openPauseButton'); 
+const closeBtn = document.getElementById('close-pause-modal');  
+
+pauseBtn.addEventListener('click', () => {
+    pause.style.display = 'flex';
+  });
+
+closeBtn.addEventListener('click', () => {
+    pause.style.display = 'none';
+  });
+
+window.addEventListener('click', (e) => {
+    if (e.target === pause) {
+      pause.style.display = 'none';
+    }
+  });
 randomizeImages();

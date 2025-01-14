@@ -231,6 +231,18 @@ function fadeOutModal(modal) {
     if (e.target === correctModal || e.target === wrongModal) {
         fadeOutModal(e.target);  
     }
-});
+    });
+
+    const restartBtn = document.getElementById('restart');
+    restartBtn.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+    const menuBtn = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+        window.location.href = 'main-menu.html';
+    });
+
+
 
 randomizeImages();

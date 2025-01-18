@@ -129,14 +129,18 @@ body{
 } 
 
 .pause-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 90%;
-  } 
+    background-image: url('Updated Picture/Assets/pause_bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: flex-end; /* Align buttons to the bottom */
+    gap: 20px; /* Space between buttons */
+    padding-bottom: 25%; /* Adjust bottom spacing */
+}
 
 .bin-effect{
     display: none;
@@ -163,4 +167,53 @@ body{
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.restart {
+    background-image: url("Updated Picture/Assets/restart.png");
+}
+
+.close-btn {
+    background-image: url("Updated Picture/Assets/play.png");
+}
+
+.menu {
+    background-image: url("Updated Picture/Assets/main_menu.png");
+}
+
+.close-btn{
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px; 
+    height: 250px; 
+    cursor: pointer; 
+}
+
+.restart, .menu {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 175px; 
+    height: 175px; 
+    cursor: pointer;
+}
+
+.restart img, .close-btn img, .menu img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pause-content > .restart, 
+.pause-content > .close-btn, 
+.pause-content > .menu {
+    margin-top: 20px; 
 }

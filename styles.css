@@ -116,32 +116,6 @@ body{
     height: auto;
 } 
 
-.pause-pop-up{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-} 
-
-.pause-content {
-    background-image: url('Updated Picture/Assets/pause_bg.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    align-items: flex-end; /* Align buttons to the bottom */
-    gap: 20px; /* Space between buttons */
-    padding-bottom: 25%; /* Adjust bottom spacing */
-}
-
 .bin-effect{
     display: none;
     position: fixed;
@@ -169,6 +143,31 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.pause-pop-up{
+    background-image: url('Updated Picture/Assets/trashdash.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+} 
+.pause-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 40px; 
+    padding: 0;
+    margin-top: 10%;
+}
+
 
 .restart {
     background-image: url("Updated Picture/Assets/restart.png");
@@ -189,8 +188,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 250px; 
-    height: 250px; 
+    width: 125px; 
+    height: 125px; 
     cursor: pointer; 
 }
 
@@ -201,8 +200,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 175px; 
-    height: 175px; 
+    width: 100px; 
+    height: 100px; 
     cursor: pointer;
 }
 
@@ -212,8 +211,93 @@ body{
     object-fit: contain;
 }
 
-.pause-content > .restart, 
-.pause-content > .close-btn, 
-.pause-content > .menu {
-    margin-top: 20px; 
+
+.button{
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    align-items: flex-end;
+}
+
+.slide{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.slider{
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-block;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    align-items: center;
+    position: relative;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 370px; 
+    height: 30px; 
+    background: linear-gradient(to right, #d4b15b, #8a651b); 
+    border-radius: 10px; 
+    border: 1px solid #8a651b;
+    outline: none; 
+    overflow: hidden; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 15px; 
+    height: 25px; 
+    background: #d4b15b; 
+    border-radius: 10%; 
+    border: 1px solid #8a651b; 
+    cursor: pointer; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); 
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #d4b15b;
+    border-radius: 50%;
+    border: 1px solid #8a651b;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #d4b15b;
+    border-radius: 50%;
+    border: 1px solid #8a651b;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 25px;
+    background: linear-gradient(to right, #d4b15b, #8a651b);
+    border-radius: 10px;
+    border: 1px solid #8a651b;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: linear-gradient(to right, #d4b15b, #8a651b);
+    border-radius: 10px;
+    border: 1px solid #8a651b;
+}
+ 
+input[type="range"]::-ms-track {
+    height: 15px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <div class="main-container">
         
         <div class="title-and-score-container">
@@ -82,15 +83,17 @@
 
     <div class="pause-pop-up" id="pause-pop-container">
         <div class="pause-content">
-            <button class = "restart" id = "restart">
-
-                </button>
-            <button class="close-btn" id="close-pause-modal">
-
-                </button>
-            <button class = "menu" id = "menu">
-                
-                </button>
+            <div class = "slide">
+                <label class = "slider">
+                    <input type ="range" class = "level" id="volume">
+                </label>
+            </div>
+            
+            <div class = "button">
+                <button class = "restart" id = "restart"></button>
+                <button class="close-btn" id="close-pause-modal"></button>
+                <button class = "menu" id = "menu"></button>
+            </div>
         </div>
     </div>
 

@@ -187,7 +187,7 @@ function loadTrashes(){
 
     return trashes
 } 
-
+// Pause pop-up 
 const pause = document.getElementById('pause-pop-container'); 
 const pauseBtn = document.getElementById('openPauseButton'); 
 const closeBtn = document.getElementById('close-pause-modal');  
@@ -195,53 +195,103 @@ const closeBtn = document.getElementById('close-pause-modal');
 const correctModal = document.getElementById('correct-pop-up');
 const wrongModal = document.getElementById('wrong-pop-up');
 
+let timerInterval; // Variable to store the interval ID
+let isPaused = false; // Tracks whether the timer is paused
+
 pauseBtn.addEventListener('click', () => {
     pause.style.display = 'flex';
-  });
+    pauseTimer(); // Pause the timer
+});
 
 closeBtn.addEventListener('click', () => {
     pause.style.display = 'none';
-  });
+    resumeTimer(); // Resume the timer
+});
 
 window.addEventListener('click', (e) => {
     if (e.target === pause) {
-      pause.style.display = 'none';
+        pause.style.display = 'none';
+        resumeTimer(); // Resume the timer
     }
-  }); 
+});
 
 function showModal(modal) {
     modal.classList.add('show');
     setTimeout(() => {
-      fadeOutModal(modal);
+        fadeOutModal(modal);
     }, 1000); 
-  } 
+} 
 
 function fadeOutModal(modal) {
     modal.style.transition = "opacity 1s ease";
     modal.style.opacity = 0;  
 
-
     setTimeout(() => {
         modal.classList.remove('show');  
         modal.style.opacity = 1;  
     }, 1000);  
-  }
+}
 
-  window.addEventListener('click', (e) => {
+window.addEventListener('click', (e) => {
     if (e.target === correctModal || e.target === wrongModal) {
         fadeOutModal(e.target);  
     }
-    });
+});
 
-    const restartBtn = document.getElementById('restart');
-    restartBtn.addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
+const restartBtn = document.getElementById('restart');
+restartBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
 
-    const menuBtn = document.getElementById('menu');
-    menuBtn.addEventListener('click', () => {
-        window.location.href = 'main-menu.html';
-    });
+const menuBtn = document.getElementById('menu');
+menuBtn.addEventListener('click', () => {
+    window.location.href = 'main-menu.html';
+});
+
+// Layout 
+const startTime = 123; 
+let time = startTime; 
+const countDown = document.getElementById('countdown');
+
+// Start the timer
+function startTimer() {
+    if (!timerInterval) {
+        timerInterval = setInterval(updateCountdown, 1000);
+    }
+}
+
+// Pause the timer
+function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    isPaused = true; // Set the timer to paused state
+}
+
+// Resume the timer
+function resumeTimer() {
+    if (isPaused) {
+        startTimer();
+        isPaused = false; // Reset the paused state
+    }
+}
+
+// Update the timer countdown
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds; 
+    countDown.innerHTML = `${minutes}:${seconds}`;
+    
+    if (time > 0) {
+        time--;
+    } else {
+        clearInterval(timerInterval);
+    }
+}
+
+// Start the timer on page load
+startTimer();
 
 
 

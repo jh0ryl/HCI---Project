@@ -14,16 +14,31 @@ body{
     margin: 0 auto; /* Center the container horizontally */
     max-width: 1200px; /* Optional: Set a maximum width for larger screens */
     padding: 20px; /* Optional: Add padding for inner spacing */
-    
     text-align: center; /* Center-align text content */
 }
 
 /* Container for title and score */
 .title-and-score-container {
     display: flex; /* Use Flexbox to align items horizontally */
+    flex-direction: row;
     justify-content: space-between; /* Space items out, with the title on the left and score on the right */
     align-items: center; /* Vertically center the items */
     padding: 10px; /* Optional: Padding for spacing */
+    border: 1px solid black;
+}
+
+.timer-life-container {
+    margin-left: -20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 30%;
+}
+
+.pause-button {
+    margin: 0;
 }
 
 /* Styling for the title */
@@ -42,9 +57,6 @@ body{
     margin: 0; /* Remove default margin from the score */
 }
 
-.refresh-button{
-    margin-left: -100px;
-}
 /* Trash bins container */
 .trash-bins-container {
     display: flex; /* Align the bins in a row */
@@ -111,8 +123,12 @@ body{
     filter: drop-shadow(8px 8px black);
 }
 
+.hearts{
+    margin: 0;
+}
+
 .hearts img {
-    width: 5%;
+    width: 15%;
     height: auto;
 } 
 
@@ -216,4 +232,4 @@ body{
 .pause-content > .close-btn, 
 .pause-content > .menu {
     margin-top: 20px; 
-}
+} 

@@ -227,13 +227,11 @@ body{
     object-fit: contain;
 }
 
-<<<<<<< HEAD
 .pause-content > .restart, 
 .pause-content > .close-btn, 
 .pause-content > .menu {
     margin-top: 20px; 
 } 
-=======
 
 .button{
     display: flex; 
@@ -242,7 +240,12 @@ body{
     align-items: flex-end;
 }
 
-.slide{
+.slider img{
+    height: 6%;
+    width: 6%;
+}
+
+.slider{
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -262,9 +265,9 @@ body{
 input[type="range"] {
     -webkit-appearance: none; 
     appearance: none; 
-    width: 370px; 
+    width: 400px; 
     height: 30px; 
-    background: linear-gradient(to right, #d4b15b, #8a651b); 
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
     border-radius: 10px; 
     border: 1px solid #8a651b;
     outline: none; 
@@ -306,14 +309,14 @@ input[type="range"]::-ms-thumb {
 input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     height: 25px;
-    background: linear-gradient(to right, #d4b15b, #8a651b);
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
     border-radius: 10px;
     border: 1px solid #8a651b;
 }
 
 input[type="range"]::-moz-range-track {
     height: 15px;
-    background: linear-gradient(to right, #d4b15b, #8a651b);
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
     border-radius: 10px;
     border: 1px solid #8a651b;
 }
@@ -324,4 +327,3 @@ input[type="range"]::-ms-track {
     border-color: transparent;
     color: transparent;
 }
->>>>>>> 5991893b7e82c625790daf4a142661fd782613a3

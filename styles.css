@@ -38,7 +38,27 @@ body{
 }
 
 .pause-button {
-    margin: 0;
+    background-image: url("Updated Picture/Assets/paused.png");
+    display: inline-block;
+    border:  4px solid black; 
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+}
+
+.pause-button:hover {
+    transform: scale(1.1); 
+    border:  4px solid rgb(8, 224, 0); ;
+    transition: transform 0.2s ease; 
+}
+.menu:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/main_menu-hover.png");
+    transition: transform 0.2s ease; 
 }
 
 /* Styling for the title */
@@ -219,6 +239,24 @@ body{
     width: 100px; 
     height: 100px; 
     cursor: pointer;
+}
+
+.close-btn:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/play-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+.restart:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/restart-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+.menu:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/main_menu-hover.png");
+    transition: transform 0.2s ease; 
 }
 
 .restart img, .close-btn img, .menu img {

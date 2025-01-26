@@ -375,7 +375,7 @@ input[type="range"]::-ms-track {
     width: 100%; 
     max-width: 1200px; 
   }
-  
+
 #gameOverChild {
     background-image: url('Updated Picture/Assets/gameover_bg.png');
     width: 800px; 
@@ -418,3 +418,27 @@ input[type="range"]::-ms-track {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+#finalScoreContainer {
+    position: absolute;
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+    width: 100%; 
+    max-width: 1200px; 
+  }
+
+#finalScoreChild {
+    background-image: url('Updated Picture/Assets/final.png');
+    width: 800px; 
+    height: 800px; 
+    background-image: url('Updated Picture/Assets/final.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 100;
+  }
+
+  

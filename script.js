@@ -266,7 +266,7 @@ resetBtn.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 123; 
+const startTime = 10; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -302,10 +302,25 @@ function updateCountdown() {
     
     if (time > 0) {
         time--;
+
     } else {
         clearInterval(timerInterval);
     }
+
+    if(time === 0){
+        var finalScoreScreen = document.getElementById("finalScoreContainer");
+        finalScoreScreen.style.display = "flex";
+        var finalScoreOpacity = document.getElementById("finalScore");
+        finalScoreOpacity.style.display = "block";
+
+        //make the items not draggable to stop the play
+        unsortedItems.forEach(item => {
+            item.setAttribute("draggable", false);
+        });
+    }
+    
 }
+
 
 // Start the timer on page load
 startTimer();

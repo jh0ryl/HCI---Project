@@ -67,6 +67,7 @@ function drop(event) {
         showModal(wrongModal); 
 
         if(heart === 0){
+            pauseTimer();
             var gameOverScreen = document.getElementById("gameOverContainer");
             gameOverScreen.style.display = "flex";
             var gameOverOpacity = document.getElementById("addOpacity");
@@ -266,7 +267,7 @@ resetBtn.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 10; 
+const startTime = 5; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -310,7 +311,7 @@ function updateCountdown() {
     if(time === 0){
         var finalScoreScreen = document.getElementById("finalScoreContainer");
         finalScoreScreen.style.display = "flex";
-        var finalScoreOpacity = document.getElementById("finalScore");
+        var finalScoreOpacity = document.getElementById("addOpacity");
         finalScoreOpacity.style.display = "block";
 
         //make the items not draggable to stop the play

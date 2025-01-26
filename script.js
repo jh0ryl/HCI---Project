@@ -2,7 +2,7 @@ let score = 0;
 let trashes = loadTrashes()
 let trash = getTrash()
 let count = 12;
-let heart = 3;
+let heart = 1;
 
 let scoreElement = document.querySelector(".score-container h3");
 
@@ -67,12 +67,15 @@ function drop(event) {
         showModal(wrongModal); 
 
         if(heart === 0){
-            console.log("Game Over");
+            var gameOverScreen = document.getElementById("gameOverContainer");
+            gameOverScreen.style.display = "flex";
+            var gameOverOpacity = document.getElementById("addOpacity");
+            gameOverOpacity.style.display = "block";
+
             //make the items not draggable to stop the play
             unsortedItems.forEach(item => {
                 item.setAttribute("draggable", false);
             });
-
         }
         
     }

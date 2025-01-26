@@ -2,7 +2,7 @@ let score = 0;
 let trashes = loadTrashes()
 let trash = getTrash()
 let count = 12;
-let heart = 1;
+let heart = 3;
 
 let scoreElement = document.querySelector(".score-container h3");
 

@@ -2,7 +2,7 @@ let score = 0;
 let trashes = loadTrashes()
 let trash = getTrash()
 let count = 12;
-let heart = 1;
+let heart = 3;
 
 let scoreElement = document.querySelector(".score-container h3");
 
@@ -263,11 +263,20 @@ resetBtn.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
+// Final Score Button
+const returnBtn1 = document.getElementById('return1');
+returnBtn1.addEventListener('click', () => {
+    window.location.href = 'main-menu.html';
+});
 
+const resetBtn1 = document.getElementById('reset1');
+resetBtn1.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
 
 
 // Layout 
-const startTime = 5; 
+const startTime = 60; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -308,7 +317,7 @@ function updateCountdown() {
         clearInterval(timerInterval);
     }
 
-    if(time === 0){
+    if(time == 0){
         var finalScoreScreen = document.getElementById("finalScoreContainer");
         finalScoreScreen.style.display = "flex";
         var finalScoreOpacity = document.getElementById("addOpacity");

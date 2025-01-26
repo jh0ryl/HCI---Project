@@ -134,6 +134,7 @@ body{
     border: 3px solid #ccc;
     padding: 20px;
     background: rgba(255,255,255,0.5);
+    z-index: 0%;
 }
 
 .unsorted-item img {
@@ -414,9 +415,10 @@ input[type="range"]::-ms-track {
 #addOpacity {
     display: none;
     position: fixed;
+    z-index: 99;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -441,4 +443,28 @@ input[type="range"]::-ms-track {
     z-index: 100;
   }
 
+  #reset1 {
+    background-image: url("Updated Picture/Assets/restart.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 60%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
+#return1 {
+    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 25%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
   

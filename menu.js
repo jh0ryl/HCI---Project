@@ -1,6 +1,7 @@
 // Background Music
 const backgroundAudio = new Audio("Updated Picture/Assets/main_menu_music.mp3");
 backgroundAudio.volume = 0; // Initial volume
+// backgroundAudio.volume = 0.1; // Initial volume
 backgroundAudio.loop = true;
 backgroundAudio.autoplay = true;
 

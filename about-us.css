@@ -145,13 +145,17 @@ flex-direction: column;
   color: #777;
 }
 
+.contact-info-container {
+  justify-content: left;
+}
+
 .icon-text {
   display: flex;
   flex-direction: row;
   word-wrap: break-word;
   margin: 15px auto; 
   color: #333; 
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .icon-text i {
@@ -177,6 +181,7 @@ flex-direction: column;
   overflow-wrap: break-word; 
   word-break: break-word; 
   display: inline-block;
+  text-align: left;
 }
 
 /*hovers*/

@@ -251,6 +251,20 @@ menuBtn.addEventListener('click', () => {
     window.location.href = 'main-menu.html';
 });
 
+// game over buttons 
+const returnBtn = document.getElementById('return');
+returnBtn.addEventListener('click', () => {
+    window.location.href = 'main-menu.html';
+});
+
+const resetBtn = document.getElementById('reset');
+resetBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+
+
+
+
 // Layout 
 const startTime = 123; 
 let time = startTime; 

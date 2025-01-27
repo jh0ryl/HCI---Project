@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HCI Project</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="addOpacity"></div>
-    <div class="main-container">
+    <!-- <div class="main-container"> -->
+    <div class="final-score-card-container">
+
         <div id="gameOverContainer">
             <div id="gameOverChild">
                 <button class = "reset" id = "reset"></button>
@@ -23,36 +25,45 @@
                 <button class = "return1" id = "return1"> </button>
         </div>
     </div>
-    
 
     <div class="main-container">   
+
         <div class="title-and-score-container">
-            <h2>Segregation Game</h2>
+
             <div class="score-container">
                 <h3>Score: 0</h3>
             </div>
+
             <div class="timer-life-container">
                 <div class="hearts">
                     <img src="Updated Picture\Assets\heart.png" id = "heart3" alt = "heart1">
                     <img src="Updated Picture\Assets\heart.png" id = "heart2" alt = "heart2">
                     <img src="Updated Picture\Assets\heart.png" id = "heart1" alt = "heart3">
                 </div>
-                <p id="countdown">2:03</p>
+                <p>Remaining Time: <span id="countdown">1:00</span></p>
+
             </div>
-                <div class="pause-container"><button class="pause-button" id="openPauseButton"></button></div>
+
+            <div class="pause-container">
+                <button class="pause-button" id="openPauseButton"></button>
+            </div>
         </div>
 
         
         <div class="trash-bins-container">
+
             <div class="trash-bin trash-bin-1">
                 <img src ="Updated Picture\Assets\hazardous-trashbin.png" type = "hazardous" alt ="Hazardous Bin" >
             </div>
+
             <div class="trash-bin trash-bin-2">
                 <img src ="Updated Picture\Assets\organic-trashbin.png" type = "organic" alt ="Organic Bin" >
             </div>
+
             <div class="trash-bin trash-bin-3">
                 <img src ="Updated Picture\Assets\recyclable-trashbin.png" type = "recyclable" alt ="Recyclable Bin" >
             </div>
+
             <div class="trash-bin trash-bin-4">
                 <img src ="Updated Picture\Assets\residual-trashbin.png" type = "residual" alt ="Residual Bin" >
             </div>
@@ -60,6 +71,7 @@
         
         
         <div class="unsorted-items-container">
+
             <div class="unsorted-item">
                 <img src="Updated Picture\NEW_Hazardous\battery.png" type = "hazardous" alt="Item 1">
             </div>
@@ -97,10 +109,10 @@
                 <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
             </div>
         </div>
-
     </div>     
 
     <div class="pause-pop-up" id="pause-pop-container">
+
         <div class="pause-content">
             <div class = "slide">
                 <label class = "slider">
@@ -116,7 +128,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="bin-effect" id="correct-pop-up">
         <div class="correct-content">

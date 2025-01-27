@@ -74,7 +74,7 @@ z-index: -1; /* This ensures it stays behind the content */
 display: flex;
 flex-direction: column;
 align-items: center;
-  justify-content: center;
+justify-content: center;
 }
 
 .description {

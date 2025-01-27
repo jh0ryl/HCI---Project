@@ -336,9 +336,10 @@ function updateCountdown() {
 startTimer();
 
     var audio = new Audio("Updated Picture/Assets/game_music.mp3");
-    audio.volume = 0.1;
+    audio.volume = 0.05;
     audio.loop = true;
-    audio.autoplay = true;
+    // audio.autoplay = true;
+    audio.autoplay = false;
 
     let volume = document.getElementById('volume');
     volume.addEventListener("change", function(e) {

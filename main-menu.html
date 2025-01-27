@@ -8,53 +8,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-    <div class="logo-button-container">
-        <div class="trash-dash-logo">
-            <img src="Updated Picture/Assets/TrashDashLogo.png" alt="" class="trash-dash-img">
+    <div class="main-menu-container">
+        <div class="left-side-container">
+
+            <div class="trash-dash-img-container">
+                <img src="Updated Picture/Assets/TrashDashLogo.png" alt="" >
+            </div>
+
+            <div class="trash-dash-buttons-container">
+                
+                <button class="start-game" onclick="location.href='index.html'">START GAME</button>
+                
+                <button class="about-us" onclick="location.href='about-us.html'">ABOUT US</button>
+
+                
+                <label class = "slider">
+                    <img src = "Updated Picture/Assets/music_btn.png">
+                    <input type ="range" class = "level" id="volume">
+                </label>
+        
+            </div>
         </div>
-        <div class="trash-dash-button">
-            <button  class="start-game"><a href="index.html">START GAME</a></button>
-            <button class="About us"><a href="about-us.html">ABOUT US</a></button>
-            <label class = "slider">
-                <img src = "Updated Picture/Assets/music_btn.png">
-                <input type ="range" class = "level" id="volume">
-            </label>
-    
+        
+        <div class="cheat-sheet-container">
+
+            <div class="cheat-sheet-title">
+                <H3 class="cheat-sheet-text">Cheat Sheet</H3>
+            </div>
+
+            <div class="trash-categories-container">
+                <div class="Hazardous trash-category">
+                    <div class="text">Residual Wastes</div>
+                    <div class="img-container">
+                        <img src="Updated Picture/Cheat sheet/residual.png" alt="">
+                    </div>
+                </div>
+                <div class="Organic trash-category">
+                    <div class="text">Hazardous Wastes</div>
+                    <div class="img-container">
+                        <img src="Updated Picture/Cheat sheet/hazardous.png" alt="">
+                    </div>
+                </div>
+                <div class="Recyclable trash-category">
+                    <div class="text">Recyclable Wastes</div>
+                    <div class="img-container">
+                        <img src="Updated Picture/Cheat sheet/recyclable.png" alt="">
+                    </div>
+                </div>
+                <div class="Residual trash-category">
+                    <div class="text">Organic Wastes</div>
+                    <div class="img-container">
+                        <img src="Updated Picture/Cheat sheet/organic.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="container">
-        <div class="title">Cheat Sheet</div>
-        <div class="trash-container">
-            <div class="Hazardous trash-bin">
-                <div class="text">Residual Wastes</div>
-                <div class="img-container">
-                    <img src="Updated Picture/Cheat sheet/residual.png" alt="">
-                </div>
-            </div>
-            <div class="Organic trash-bin">
-                <div class="text">Hazardous Wastes</div>
-                <div class="img-container">
-                    <img src="Updated Picture/Cheat sheet/hazardous.png" alt="">
-                </div>
-            </div>
-            <div class="Recyclable trash-bin">
-                <div class="text">Recyclable Wastes</div>
-                <div class="img-container">
-                    <img src="Updated Picture/Cheat sheet/recyclable.png" alt="">
-                </div>
-            </div>
-            <div class="Residual trash-bin">
-                <div class="text">Organic Wastes</div>
-                <div class="img-container">
-                    <img src="Updated Picture/Cheat sheet/organic.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+
     <script src="menu.js"></script>
+
 </body>
+
 </html>

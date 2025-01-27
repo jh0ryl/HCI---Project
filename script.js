@@ -67,6 +67,7 @@ function drop(event) {
         showModal(wrongModal); 
 
         if(heart === 0){
+            pauseTimer();
             var gameOverScreen = document.getElementById("gameOverContainer");
             gameOverScreen.style.display = "flex";
             var gameOverOpacity = document.getElementById("addOpacity");
@@ -262,11 +263,20 @@ resetBtn.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
+// Final Score Button
+const returnBtn1 = document.getElementById('return1');
+returnBtn1.addEventListener('click', () => {
+    window.location.href = 'main-menu.html';
+});
 
+const resetBtn1 = document.getElementById('reset1');
+resetBtn1.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
 
 
 // Layout 
-const startTime = 123; 
+const startTime = 60; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -302,10 +312,25 @@ function updateCountdown() {
     
     if (time > 0) {
         time--;
+
     } else {
         clearInterval(timerInterval);
     }
+
+    if(time == 0){
+        var finalScoreScreen = document.getElementById("finalScoreContainer");
+        finalScoreScreen.style.display = "flex";
+        var finalScoreOpacity = document.getElementById("addOpacity");
+        finalScoreOpacity.style.display = "block";
+
+        //make the items not draggable to stop the play
+        unsortedItems.forEach(item => {
+            item.setAttribute("draggable", false);
+        });
+    }
+    
 }
+
 
 // Start the timer on page load
 startTimer();

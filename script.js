@@ -346,6 +346,33 @@ startTimer();
         audio.volume = e.currentTarget.value / 1000;
     })
 
+const img = document.querySelectorAll('.unsorted-item img');
 
+// Add event listener to play sound when the trash image is hovered
+img.forEach(img => {
+    img.addEventListener('mouseenter', () => {
+        const hoverAudio = new Audio('Sound Effects/buttonhover3.mp3');
+        hoverAudio.volume = 0.3; 
+        hoverAudio.play();
+    });
+});
+
+// Add event listener for the trash bin hover that will only be triggered during drag and drop events
+const trashBins = document.querySelectorAll('.trash-bin-1, .trash-bin-2, .trash-bin-3, .trash-bin-4');
+
+trashBins.forEach(bin => {
+   bin.addEventListener('dragover', (e) => {
+       e.preventDefault();
+       bin.querySelector('img').classList.add('dragging-over');
+   });
+
+   bin.addEventListener('dragleave', () => {
+       bin.querySelector('img').classList.remove('dragging-over');
+   });
+
+   bin.addEventListener('drop', () => {
+       bin.querySelector('img').classList.remove('dragging-over');
+   });
+});
 
 randomizeImages();

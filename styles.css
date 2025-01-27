@@ -166,6 +166,14 @@ body::before {
     overflow: hidden; /* Hide any overflow */
 }
 
+/* Drag Effect for bins*/
+.trash-bin-1 img.dragging-over, 
+.trash-bin-2 img.dragging-over,
+.trash-bin-3 img.dragging-over,
+.trash-bin-4 img.dragging-over {
+    transform: scale(1.1);
+}
+
 /* Individual colors */
 .trash-bin-1 img,
 .trash-bin-2 img,
@@ -202,6 +210,9 @@ body::before {
     filter: drop-shadow(8px 8px black);
 }
 
+.unsorted-item img:hover {
+    transform: scale(1.2);
+}
 .bin-effect{
     display: none;
     position: fixed;

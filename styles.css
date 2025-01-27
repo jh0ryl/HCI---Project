@@ -14,16 +14,51 @@ body{
     margin: 0 auto; /* Center the container horizontally */
     max-width: 1200px; /* Optional: Set a maximum width for larger screens */
     padding: 20px; /* Optional: Add padding for inner spacing */
-    
     text-align: center; /* Center-align text content */
 }
 
 /* Container for title and score */
 .title-and-score-container {
     display: flex; /* Use Flexbox to align items horizontally */
+    flex-direction: row;
     justify-content: space-between; /* Space items out, with the title on the left and score on the right */
     align-items: center; /* Vertically center the items */
     padding: 10px; /* Optional: Padding for spacing */
+    border: 1px solid black;
+}
+
+.timer-life-container {
+    margin-left: -20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 30%;
+}
+
+.pause-button {
+    background-image: url("Updated Picture/Assets/paused.png");
+    display: inline-block;
+    border:  4px solid black; 
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+}
+
+.pause-button:hover {
+    transform: scale(1.1); 
+    border:  4px solid rgb(8, 224, 0); ;
+    transition: transform 0.2s ease; 
+}
+.menu:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/main_menu-hover.png");
+    transition: transform 0.2s ease; 
 }
 
 /* Styling for the title */
@@ -42,9 +77,6 @@ body{
     margin: 0; /* Remove default margin from the score */
 }
 
-.refresh-button{
-    margin-left: -100px;
-}
 /* Trash bins container */
 .trash-bins-container {
     display: flex; /* Align the bins in a row */
@@ -70,6 +102,7 @@ body{
     object-fit: contain;
     width: 100%;
     height: auto;
+    
 }
 
 .trash-bin-2 img {
@@ -101,6 +134,7 @@ body{
     border: 3px solid #ccc;
     padding: 20px;
     background: rgba(255,255,255,0.5);
+    z-index: 0%;
 }
 
 .unsorted-item img {
@@ -109,3 +143,328 @@ body{
     object-fit: contain; /* Ensure images maintain their aspect ratio */
     filter: drop-shadow(8px 8px black);
 }
+
+.hearts{
+    margin: 0;
+}
+
+.hearts img {
+    width: 15%;
+    height: auto;
+} 
+
+.bin-effect{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.bin-effect.show {
+    display: flex;
+    opacity: 1;
+}
+
+.correct-content, .wrong-content{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pause-pop-up{
+    background-image: url('Updated Picture/Assets/trashdash.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+} 
+.pause-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 40px; 
+    padding: 0;
+    margin-top: 10%;
+}
+
+
+.restart {
+    background-image: url("Updated Picture/Assets/restart.png");
+}
+
+.close-btn {
+    background-image: url("Updated Picture/Assets/play.png");
+}
+
+.menu {
+    background-image: url("Updated Picture/Assets/main_menu.png");
+}
+
+.close-btn{
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 125px; 
+    height: 125px; 
+    cursor: pointer; 
+}
+
+.restart, .menu {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px; 
+    height: 100px; 
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/play-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+.restart:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/restart-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+.menu:hover {
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/main_menu-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+.restart img, .close-btn img, .menu img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pause-content > .restart, 
+.pause-content > .close-btn, 
+.pause-content > .menu {
+    margin-top: 20px; 
+} 
+
+.button{
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    align-items: flex-end;
+}
+
+.slider img{
+    height: 6%;
+    width: 6%;
+}
+
+.slider{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.slider{
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-block;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    align-items: center;
+    position: relative;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 400px; 
+    height: 30px; 
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
+    border-radius: 10px; 
+    border: 1px solid #8a651b;
+    outline: none; 
+    overflow: hidden; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 15px; 
+    height: 25px; 
+    background: #d4b15b; 
+    border-radius: 10%; 
+    border: 1px solid #8a651b; 
+    cursor: pointer; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); 
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #d4b15b;
+    border-radius: 50%;
+    border: 1px solid #8a651b;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #d4b15b;
+    border-radius: 50%;
+    border: 1px solid #8a651b;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 25px;
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
+    border-radius: 10px;
+    border: 1px solid #8a651b;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: linear-gradient(to right, #d4b15b, #b4924e); 
+    border-radius: 10px;
+    border: 1px solid #8a651b;
+}
+ 
+input[type="range"]::-ms-track {
+    height: 15px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+#gameOverContainer {
+    position: absolute;
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+    width: 100%; 
+    max-width: 1200px; 
+  }
+
+#gameOverChild {
+    background-image: url('Updated Picture/Assets/gameover_bg.png');
+    width: 800px; 
+    height: 800px; 
+    background-image: url('Updated Picture/Assets/gameover_bg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 100;
+  }
+#reset {
+    background-image: url("Updated Picture/Assets/restart.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 60%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
+#return {
+    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 25%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
+
+#addOpacity {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#finalScoreContainer {
+    position: absolute;
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+    width: 100%; 
+    max-width: 1200px; 
+  }
+
+#finalScoreChild {
+    background-image: url('Updated Picture/Assets/final.png');
+    width: 800px; 
+    height: 800px; 
+    background-image: url('Updated Picture/Assets/final.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 100;
+  }
+
+  #reset1 {
+    background-image: url("Updated Picture/Assets/restart.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 60%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
+#return1 {
+    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 25%;
+    width: 150px; 
+    height: 150px; 
+    border: none;
+    cursor: pointer;
+}
+  

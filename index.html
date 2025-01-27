@@ -7,15 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div id="addOpacity"></div>
     <div class="main-container">
+        <div id="gameOverContainer">
+            <div id="gameOverChild">
+                <button class = "reset" id = "reset"></button>
+                <button class = "return" id = "return"> </button>
+            </div>
+        </div> 
         
+        <div id ="finalScoreContainer">  
+            <div id="finalScoreChild">
+                <button class = "reset1" id = "reset1"></button>
+                <button class = "return1" id = "return1"> </button>
+        </div>
+    </div>
+    
+
+    <div class="main-container">   
         <div class="title-and-score-container">
             <h2>Segregation Game</h2>
-            <button class="refresh-button">Refresh</button>
             <div class="score-container">
                 <h3>Score: 0</h3>
             </div>
+            <div class="timer-life-container">
+                <div class="hearts">
+                    <img src="Updated Picture\Assets\heart.png" id = "heart3" alt = "heart1">
+                    <img src="Updated Picture\Assets\heart.png" id = "heart2" alt = "heart2">
+                    <img src="Updated Picture\Assets\heart.png" id = "heart1" alt = "heart3">
+                </div>
+                <p id="countdown">2:03</p>
+            </div>
+                <div class="pause-container"><button class="pause-button" id="openPauseButton"></button></div>
         </div>
+
         
         <div class="trash-bins-container">
             <div class="trash-bin trash-bin-1">
@@ -34,7 +60,7 @@
         
         
         <div class="unsorted-items-container">
-            <div class="unsorted-item" draggable="true">
+            <div class="unsorted-item">
                 <img src="Updated Picture\NEW_Hazardous\battery.png" type = "hazardous" alt="Item 1">
             </div>
             <div class="unsorted-item">
@@ -52,10 +78,57 @@
             <div class="unsorted-item">
                 <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
             </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
+            <div class="unsorted-item">
+                <img src="Updated Picture\NEW_Recyclable\bottle.png" type = "recyclable" alt="Item 6">
+            </div>
         </div>
 
-    </div>    
+    </div>     
 
+    <div class="pause-pop-up" id="pause-pop-container">
+        <div class="pause-content">
+            <div class = "slide">
+                <label class = "slider">
+                    <img src = "Updated Picture/Assets/music_btn.png">
+                    <input type ="range" class = "level" id="volume">
+                </label>
+            </div>
+            
+            <div class = "button">
+                <button class = "restart" id = "restart"></button>
+                <button class="close-btn" id="close-pause-modal"></button>
+                <button class = "menu" id = "menu"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bin-effect" id="correct-pop-up">
+        <div class="correct-content">
+            <h2>GALING MO GAGO!</h2>
+        </div>
+    </div> 
+
+    <div class="bin-effect" id="wrong-pop-up">
+        <div class="wrong-content">
+            <h2>BOBO MALI KA!</h2>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

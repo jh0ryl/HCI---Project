@@ -1,20 +1,40 @@
-/* General styles for the main container */
-body{
+body {
     box-sizing: border-box;
-    background-image: url("Updated\ Picture/Assets/Background.png");
-    background-size: cover;
-    background-attachment: fixed;
+    font-family: 'Nunito', Helvetica, sans-serif;
     min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 2px solid #333; 
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("Updated\ Picture/Assets/Background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(4px) saturate(0.7); /* Slightly increase the saturation */
+    z-index: -1; /* This ensures it stays behind the content */
 }
 
 .main-container {
-    width: 100%; /* Set the width to 80% of the parent container */
-    margin: 0 auto; /* Center the container horizontally */
+    height: 95vh;
     max-width: 1200px; /* Optional: Set a maximum width for larger screens */
-    padding: 20px; /* Optional: Add padding for inner spacing */
-    text-align: center; /* Center-align text content */
+    text-align: center;
+    padding: 10px;
+    /* border: 2px solid #333; */
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* Container for title and score */
@@ -24,103 +44,146 @@ body{
     justify-content: space-between; /* Space items out, with the title on the left and score on the right */
     align-items: center; /* Vertically center the items */
     padding: 10px; /* Optional: Padding for spacing */
-    border: 1px solid black;
+    background-color: #f7f0cb;
+    border: 3px solid rgb(91, 45, 0);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px rgb(91, 45, 0);
 }
 
+/* Styling for the score */
+.score-container{
+    width: 15%;
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.score-container h3 {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    align-self: flex-start;
+    margin: 5px; /* Remove default margin from the score */
+}
+
+
 .timer-life-container {
-    margin-left: -20%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: space-around; */
     align-items: center;
     /* border: 1px solid black; */
-    width: 30%;
+    padding: 0px 5px;
+    width: 60%;
+    height: 80px;
 }
+
+.hearts {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 100%;
+    display: flex; /* Ensure content inside is flexible */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent overflow if the image doesn't match aspect ratio */
+}
+
+.hearts img {
+    width: 25%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    object-position: center; /* Center the image within the container */
+    /* border: 1px solid black; */
+}
+
+.timer-life-container p {
+    /* border: 1px solid black; */
+    margin: 2px;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 20px;
+}
+
+#countdown {
+    font-weight: 900;
+}
+
 
 .pause-button {
     background-image: url("Updated Picture/Assets/paused.png");
     display: inline-block;
-    border:  4px solid black; 
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 40px; 
-    height: 40px; 
+    width: 55px; 
+    height: 55px; 
     cursor: pointer;
+    margin: 5px;
+    border-radius: 7.5px;
+    border:  2px solid #333; ;
 }
 
 .pause-button:hover {
     transform: scale(1.1); 
-    border:  4px solid rgb(8, 224, 0); ;
-    transition: transform 0.2s ease; 
-}
-.menu:hover {
-    transform: scale(1.1); 
-    background-image: url("Updated Picture/Assets/main_menu-hover.png");
+    border:  4px solid rgb(194, 112, 19); ;
     transition: transform 0.2s ease; 
 }
 
 /* Styling for the title */
-.title-and-score-container h2 {
+/* .title-and-score-container h2 {
     margin: 0; /* Remove default margin from the title */
-}
-
-/* Styling for the score container */
-.score-container {
-    display: flex; /* Ensure score is displayed correctly */
-    justify-content: flex-end; /* Align score container to the right */
-}
-
-/* Styling for the score */
-.score-container h3 {
-    margin: 0; /* Remove default margin from the score */
-}
-
+    /* border: 1px solid black;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 75px;
+    border: 4px solid rgb(91, 45, 0);
+    background-color: #ffb01e;
+} */
+ 
 /* Trash bins container */
 .trash-bins-container {
+    height: 50%;
     display: flex; /* Align the bins in a row */
     justify-content: space-around; /* Space the bins evenly */
     align-items: center; /* Center bins vertically within the row */
-    margin-bottom: 20px; /* Add space below the bins */
-    padding: 10px; /* Optional: Add padding for aesthetics */
+    margin: 5px;
     background: rgba(0,0,0,0); /*background*/
     object-fit: contain;
+    /* border: 1px solid black; */
+    padding: 5px;
 }
 
 /* Base styles for all trash bins */
 .trash-bin {
     width: 30%; /* Set width to 30% of the container */
-    height: 60vh; /* Set a fixed height for the bins */
+    height: 100%; /* Set a fixed height for the bins */
     display: flex; /* For centering content inside */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Drag Effect for bins*/
+.trash-bin-1 img.dragging-over, 
+.trash-bin-2 img.dragging-over,
+.trash-bin-3 img.dragging-over,
+.trash-bin-4 img.dragging-over {
+    transform: scale(1.1);
 }
 
 /* Individual colors */
-.trash-bin-1 img {
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-    
-}
-
-.trash-bin-2 img {
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-}
-
-.trash-bin-3 img {
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-}
-
+.trash-bin-1 img,
+.trash-bin-2 img,
+.trash-bin-3 img,
 .trash-bin-4 img {
     object-fit: contain;
     width: 100%;
-    height: auto;
+    height: 100%; /* Ensure image fits within the container */
+    max-width: 100%;
+    max-height: 100%; /* Prevent image from overflowing */
 }
 
 .unsorted-items-container {
@@ -131,10 +194,13 @@ body{
     gap: 10px; /* Adjust spacing between items */
     justify-items: center;
     align-items: center;
-    border: 3px solid #ccc;
+    margin-top: 30px;
     padding: 20px;
-    background: rgba(255,255,255,0.5);
     z-index: 0%;
+    background-color: rgba(247, 240, 203, 0.6);
+    border: 5px solid rgb(91, 45, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .unsorted-item img {
@@ -144,15 +210,9 @@ body{
     filter: drop-shadow(8px 8px black);
 }
 
-.hearts{
-    margin: 0;
+.unsorted-item img:hover {
+    transform: scale(1.2);
 }
-
-.hearts img {
-    width: 15%;
-    height: auto;
-} 
-
 .bin-effect{
     display: none;
     position: fixed;
@@ -367,6 +427,12 @@ input[type="range"]::-ms-track {
     color: transparent;
 }
 
+
+/* Score Cards */
+.final-score-card-container {
+    /* border: 1px solid black; */
+}
+
 #gameOverContainer {
     position: absolute;
     display: none;
@@ -387,6 +453,7 @@ input[type="range"]::-ms-track {
     background-repeat: no-repeat; 
     z-index: 100;
   }
+
 #reset {
     background-image: url("Updated Picture/Assets/restart.png");
     background-color: transparent;

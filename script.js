@@ -47,7 +47,9 @@ function drop(event) {
       console.log('Correct match!');
       score = score + 50;
         updateScore();
-        showModal(correctModal); 
+      var correctAudio = new Audio("Sound Effects/Correct.mp3");
+      correctAudio.volume = 0.2;
+      correctAudio.play();
     
       if (draggedObject) {
         draggedObject.style.display = 'none'; //makes the item disappear when put to correct bin
@@ -64,14 +66,21 @@ function drop(event) {
             heartIcons[heart].style.filter = "grayscale(100%)"; //set the heart to grey when an item is put to wrong bin
         }
         console.log('Wrong bin!');
-        showModal(wrongModal); 
+      var wrongAudio = new Audio("Sound Effects/Wrong.mp3");
+      wrongAudio.volume = 0.2;
+      wrongAudio.play();    
 
         if(heart === 0){
             pauseTimer();
             var gameOverScreen = document.getElementById("gameOverContainer");
             gameOverScreen.style.display = "flex";
             var gameOverOpacity = document.getElementById("addOpacity");
-            gameOverOpacity.style.display = "block";
+            
+
+            audio.pause();
+            var loseAudio = new Audio("Sound Effects/Lose.mp3");
+            loseAudio.volume = 0.1;
+            loseAudio.play();
 
             //make the items not draggable to stop the play
             unsortedItems.forEach(item => {
@@ -276,7 +285,7 @@ resetBtn1.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 60; 
+const startTime = 3; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -321,7 +330,11 @@ function updateCountdown() {
         var finalScoreScreen = document.getElementById("finalScoreContainer");
         finalScoreScreen.style.display = "flex";
         var finalScoreOpacity = document.getElementById("addOpacity");
-        finalScoreOpacity.style.display = "block";
+
+        audio.pause();
+        var winAudio = new Audio("Sound Effects/Win.mp3");
+        winAudio.volume = 0.1;
+        winAudio.play();
 
         //make the items not draggable to stop the play
         unsortedItems.forEach(item => {
@@ -338,8 +351,8 @@ startTimer();
     var audio = new Audio("Updated Picture/Assets/game_music.mp3");
     audio.volume = 0.05;
     audio.loop = true;
-    // audio.autoplay = true;
-    audio.autoplay = false;
+    audio.autoplay = true;
+    //audio.autoplay = false;
 
     let volume = document.getElementById('volume');
     volume.addEventListener("change", function(e) {

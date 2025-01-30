@@ -5,6 +5,7 @@ let count = 12;
 let heart = 3;
 
 let scoreElement = document.querySelector(".score-container h3");
+let scoreText = document.querySelector(".score-text");
 
 //make the unsorted items draggable and add the starting drag function
 let unsortedItems = document.querySelectorAll(".unsorted-item img");
@@ -93,6 +94,7 @@ function drop(event) {
 
 function updateScore() {
     scoreElement.textContent = `Score: ${score}`;
+    scoreText.textContent = `${score}`; 
 }
 
 //starting drag function

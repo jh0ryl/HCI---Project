@@ -505,9 +505,9 @@ input[type="range"]::-ms-track {
   .score-text{
     position: relative;
     top: 50%;
-    left: 28%;
+    left: 23%;
     font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
-    font-size: 4.5rem;
+    font-size: 7.5rem;
     margin: 0;
     color: #facd20;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);

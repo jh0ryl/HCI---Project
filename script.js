@@ -285,7 +285,7 @@ resetBtn1.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 3; 
+const startTime = 30; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -352,7 +352,7 @@ startTimer();
     audio.volume = 0.05;
     audio.loop = true;
     audio.autoplay = true;
-    //audio.autoplay = false;
+    // audio.autoplay = false;
 
     let volume = document.getElementById('volume');
     volume.addEventListener("change", function(e) {

@@ -59,12 +59,14 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 50%;
 }
 
 .trash-dash-img-container{
+    margin-top: 20px;
     width: 100%;
-    height: 50%;
+    height: 60%;
     /* overflow: hidden; */
     position: relative; /* Keeps the container's positioning consistent */
     /* border: 1px solid black; */
@@ -147,6 +149,41 @@ a{
     justify-content: center;
 }
 
+.instructions-container{
+    padding: 30px;
+    padding-top: 0px;
+    height: 150px;
+    background-color: #ffb01e;
+    border: 4px solid rgb(91, 45, 0);
+    border-radius: 20px;
+    box-shadow: 3px 3px 0px rgb(91, 45, 0);
+    /* border: 1px solid white; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions-container h3 {
+    /* border: 1px solid white; */
+    font-size: 22px;
+    font-family: 'Novita', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color:  rgb(91, 45, 0);
+}
+
+.instructions-container p {
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    font-size: 18px;
+    font-family: 'Novita', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color:  rgb(91, 45, 0);
+}
+
+
 /* border: 4px solid rgb(91, 45, 0);
     background-color: #ffb01e; */
 
@@ -177,14 +214,13 @@ a{
 
 .trash-categories-container {
     display: grid;
-    grid-template-columns: 360px 360px; /* 2 equal columns */
-    grid-template-rows: auto; /* 2 equal rows */
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 240px 240px; /* 2 equal rows */
     width: 90%;
-    height: 70%; /* Ensures it takes up the full available height */
     align-items: center;
     justify-content: center;
     max-width: 1200px;
-    min-width: 768px;
+    min-width: 600px;
     margin-top: 20px;
     /* border: 1px solid black; */
     gap: 20px; /* Adds space between the grid items */
@@ -195,7 +231,7 @@ a{
     width: 98%;
     background: radial-gradient(circle, #f0c9a9, #ffb01e); /* Light gradient from one color to another */
     border: 4px solid rgb(91, 45, 0);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 3px 3px 0px rgb(91, 45, 0);
     transition: all 0.1s ease-in-out; /* Smooth transition for hover effects */
 }

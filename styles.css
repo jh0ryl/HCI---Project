@@ -325,7 +325,7 @@ body::before {
 } 
 
 .button{
-    display: flex; 
+     display: flex; 
     justify-content: center; 
     gap: 20px; 
     align-items: flex-end;
@@ -452,9 +452,13 @@ input[type="range"]::-ms-track {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 60%;
+   /* margin-top: 60%;
     width: 150px; 
-    height: 150px; 
+    height: 150px; */
+    margin-top: 380px;
+    margin-left: 160px;
+    width: 80px; 
+    height: 80px; 
     border: none;
     cursor: pointer;
 }
@@ -464,9 +468,13 @@ input[type="range"]::-ms-track {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 25%;
+    /*margin-right: 25%;
     width: 150px; 
-    height: 150px; 
+    height: 150px; */
+    margin-right: 40px;
+    margin-top: 30px;
+    width: 200px; 
+    height: 85px;
     border: none;
     cursor: pointer;
 }
@@ -522,7 +530,7 @@ input[type="range"]::-ms-track {
     background-position: center;
     margin-top: 380px;
     margin-left: 160px;
-    width: 120px; 
+    width: 80px; 
     height: 80px; 
     border: none;
     cursor: pointer;
@@ -536,7 +544,7 @@ input[type="range"]::-ms-track {
     margin-right: 40px;
     margin-top: 30px;
     width: 200px; 
-    height: 90px;
+    height: 85px;
     border: none;
     cursor: pointer;
 }

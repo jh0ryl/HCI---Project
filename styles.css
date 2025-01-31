@@ -456,14 +456,14 @@ input[type="range"]::-ms-track {
     width: 150px; 
     height: 150px; */
     margin-top: 380px;
-    margin-left: 160px;
+    margin-left: 170px;
     width: 80px; 
-    height: 80px; 
+    height: 84px; 
     border: none;
     cursor: pointer;
 }
 #return {
-    background-image: url("Updated Picture/Assets/");
+    background-image: url("Updated Picture/Assets/return.png");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
@@ -473,7 +473,7 @@ input[type="range"]::-ms-track {
     height: 150px; */
     margin-right: 40px;
     margin-top: 30px;
-    width: 200px; 
+    width: 155px; 
     height: 85px;
     border: none;
     cursor: pointer;
@@ -529,51 +529,48 @@ input[type="range"]::-ms-track {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 380px;
-    margin-left: 165px;
+    margin-left: 170px;
     width: 80px; 
-    height: 80px; 
+    height: 84px; 
     border: none;
     cursor: pointer;
 }
 #return1 {
-    background-image: url("Updated Picture/Assets/testtttttttttt.png");
+    background-image: url("Updated Picture/Assets/return.png");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 40px;
     margin-top: 30px;
-    width: 200px; 
+    width: 155px; 
     height: 85px;
     border: none;
     cursor: pointer;
 }
 
 #reset:hover { 
-    transform: scale(1.1); 
+    transform: scale(1.2); 
     background-image: url("Updated Picture/Assets/restart-hover.png");
     transition: transform 0.2s ease; 
 
 }
 
 #reset1:hover { 
-    transform: scale(1.1); 
+    transform: scale(1.2); 
     background-image: url("Updated Picture/Assets/restart-hover.png");
     transition: transform 0.2s ease; 
 }
 
-/*#return:hover { 
+#return:hover { 
     transform: scale(1.1); 
-    background-image: url("");
+    background-image: url("Updated Picture/Assets/return-hover.png");
     transition: transform 0.2s ease; 
 }
 
 #return1:hover { 
     transform: scale(1.1); 
-    background-image: url("");
+    background-image: url("Updated Picture/Assets/return-hover.png");
     transition: transform 0.2s ease; 
-}*/
+}
 
-/* state=hover */
-
-/* Auto layout */

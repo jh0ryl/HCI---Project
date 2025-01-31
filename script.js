@@ -287,7 +287,7 @@ resetBtn1.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 3; 
+const startTime = 60; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 

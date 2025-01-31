@@ -529,7 +529,7 @@ input[type="range"]::-ms-track {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 380px;
-    margin-left: 160px;
+    margin-left: 165px;
     width: 80px; 
     height: 80px; 
     border: none;
@@ -548,4 +548,27 @@ input[type="range"]::-ms-track {
     border: none;
     cursor: pointer;
 }
-  
+
+/*#reset:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}
+
+#reset1:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}
+
+#return:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}
+
+#return1:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}*/

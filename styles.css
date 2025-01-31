@@ -463,7 +463,7 @@ input[type="range"]::-ms-track {
     cursor: pointer;
 }
 #return {
-    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-image: url("Updated Picture/Assets/");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
@@ -513,9 +513,9 @@ input[type="range"]::-ms-track {
   .score-text{
     position: relative;
     top: 47%;
-    left: 35%;
+    left: 25%;
     font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
-    font-size: 7.5rem;
+    font-size: 6rem;
     margin: 0;
     color: #facd20;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
@@ -536,7 +536,7 @@ input[type="range"]::-ms-track {
     cursor: pointer;
 }
 #return1 {
-    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-image: url("Updated Picture/Assets/testtttttttttt.png");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
@@ -549,19 +549,20 @@ input[type="range"]::-ms-track {
     cursor: pointer;
 }
 
-/*#reset:hover { 
+#reset:hover { 
     transform: scale(1.1); 
-    background-image: url("");
+    background-image: url("Updated Picture/Assets/restart-hover.png");
     transition: transform 0.2s ease; 
+
 }
 
 #reset1:hover { 
     transform: scale(1.1); 
-    background-image: url("");
+    background-image: url("Updated Picture/Assets/restart-hover.png");
     transition: transform 0.2s ease; 
 }
 
-#return:hover { 
+/*#return:hover { 
     transform: scale(1.1); 
     background-image: url("");
     transition: transform 0.2s ease; 
@@ -572,3 +573,7 @@ input[type="range"]::-ms-track {
     background-image: url("");
     transition: transform 0.2s ease; 
 }*/
+
+/* state=hover */
+
+/* Auto layout */

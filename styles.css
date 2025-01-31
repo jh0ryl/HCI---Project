@@ -325,7 +325,7 @@ body::before {
 } 
 
 .button{
-    display: flex; 
+     display: flex; 
     justify-content: center; 
     gap: 20px; 
     align-items: flex-end;
@@ -452,21 +452,29 @@ input[type="range"]::-ms-track {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 60%;
+   /* margin-top: 60%;
     width: 150px; 
-    height: 150px; 
+    height: 150px; */
+    margin-top: 380px;
+    margin-left: 160px;
+    width: 80px; 
+    height: 80px; 
     border: none;
     cursor: pointer;
 }
 #return {
-    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-image: url("Updated Picture/Assets/");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 25%;
+    /*margin-right: 25%;
     width: 150px; 
-    height: 150px; 
+    height: 150px; */
+    margin-right: 40px;
+    margin-top: 30px;
+    width: 200px; 
+    height: 85px;
     border: none;
     cursor: pointer;
 }
@@ -505,9 +513,9 @@ input[type="range"]::-ms-track {
   .score-text{
     position: relative;
     top: 47%;
-    left: 35%;
+    left: 25%;
     font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
-    font-size: 7.5rem;
+    font-size: 6rem;
     margin: 0;
     color: #facd20;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
@@ -521,14 +529,14 @@ input[type="range"]::-ms-track {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 380px;
-    margin-left: 160px;
-    width: 120px; 
+    margin-left: 165px;
+    width: 80px; 
     height: 80px; 
     border: none;
     cursor: pointer;
 }
 #return1 {
-    background-image: url("Updated Picture/Assets/testtttttttttt.png ");
+    background-image: url("Updated Picture/Assets/testtttttttttt.png");
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
@@ -536,8 +544,36 @@ input[type="range"]::-ms-track {
     margin-right: 40px;
     margin-top: 30px;
     width: 200px; 
-    height: 90px;
+    height: 85px;
     border: none;
     cursor: pointer;
 }
-  
+
+#reset:hover { 
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/restart-hover.png");
+    transition: transform 0.2s ease; 
+
+}
+
+#reset1:hover { 
+    transform: scale(1.1); 
+    background-image: url("Updated Picture/Assets/restart-hover.png");
+    transition: transform 0.2s ease; 
+}
+
+/*#return:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}
+
+#return1:hover { 
+    transform: scale(1.1); 
+    background-image: url("");
+    transition: transform 0.2s ease; 
+}*/
+
+/* state=hover */
+
+/* Auto layout */

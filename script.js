@@ -84,6 +84,11 @@ function drop(event) {
 
 function updateScore() {
     scoreElement.textContent = `Score: ${score}`;
+<<<<<<< Updated upstream
+=======
+    document.querySelector("#gameOverContainer .score-text").textContent = `${score}`;
+    document.querySelector("#finalScoreContainer .score-text").textContent = `${score}`;
+>>>>>>> Stashed changes
 }
 
 //starting drag function

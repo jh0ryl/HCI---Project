@@ -333,6 +333,8 @@ function updateCountdown() {
         finalScoreScreen.style.display = "flex";
         var finalScoreOpacity = document.getElementById("addOpacity");
 
+        const finalScoreElement = document.querySelector("#finalScoreContainer .score-text");
+        finalScoreElement.textContent = score;
 
 
         audio.pause();

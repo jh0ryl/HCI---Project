@@ -424,16 +424,35 @@ input[type="range"]::-ms-track {
 .final-score-card-container {
     /* border: 1px solid black; */
 }
-
+/* 
 #gameOverContainer {
-    position: absolute;
+    position: fixed;
+    border: 1px solid black;
     display: none;
     justify-content: center; 
     align-items: center;
     height: 100%; 
     width: 100%; 
     max-width: 1200px; 
-  }
+    z-index: 100;
+  } */
+
+  #gameOverContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    /* border: 1px solid black; */
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    height: auto; /* Adjust height based on content */
+    width: 90%; /* Adjust width, so it doesn't stretch too much */
+    max-width: 600px; /* Prevents it from becoming too wide */
+    padding: 20px;
+    z-index: 100;
+}
+
 
 #gameOverChild {
     background-image: url('Updated Picture/Assets/gameover_bg.png');
@@ -443,7 +462,6 @@ input[type="range"]::-ms-track {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-    z-index: 100;
   }
 
 #reset {
@@ -452,15 +470,13 @@ input[type="range"]::-ms-track {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-   /* margin-top: 60%;
-    width: 150px; 
-    height: 150px; */
-    margin-top: 380px;
-    margin-left: 170px;
+    margin-top: 450px;
+    margin-left: 100px;
     width: 80px; 
     height: 84px; 
     border: none;
     cursor: pointer;
+
 }
 #return {
     background-image: url("Updated Picture/Assets/return1.png");
@@ -490,14 +506,16 @@ input[type="range"]::-ms-track {
 
 
 #finalScoreContainer {
-    position: absolute;
+    position: fixed;
     display: none;
+    transform: translate(-0%, -50%); /* Centers it */
     justify-content: center; 
     align-items: center;
     height: 100%; 
     width: 100%; 
     max-width: 1200px; 
-    margin-top: -25%;
+    /* margin-top: -25%; */
+    z-index: 100;
   }
 
 #finalScoreChild {

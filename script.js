@@ -94,7 +94,7 @@ function drop(event) {
 
 function updateScore() {
     scoreElement.textContent = `Score: ${score}`;
-    scoreText.textContent = `${score}`; 
+    scoreText.textContent = `${score}`;
 }
 
 //starting drag function
@@ -287,7 +287,7 @@ resetBtn1.addEventListener('click', () => {
 
 
 // Layout 
-const startTime = 60; 
+const startTime = 30; 
 let time = startTime; 
 const countDown = document.getElementById('countdown');
 
@@ -332,6 +332,8 @@ function updateCountdown() {
         var finalScoreScreen = document.getElementById("finalScoreContainer");
         finalScoreScreen.style.display = "flex";
         var finalScoreOpacity = document.getElementById("addOpacity");
+
+
 
         audio.pause();
         var winAudio = new Audio("Sound Effects/Win.mp3");
